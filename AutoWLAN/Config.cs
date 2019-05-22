@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoWLAN
 {
-    public class WlanData
+    public class Config
     {
         public string SSID;
         public bool Autostart;
