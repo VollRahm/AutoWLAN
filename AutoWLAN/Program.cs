@@ -26,7 +26,7 @@ namespace AutoWLAN
 
         static void Main(string[] args)
         {
-           // ShowWindow(GetConsoleWindow(), 0 /*hide console*/);
+            ShowWindow(GetConsoleWindow(), 0 /*hide console*/);
 
             #region Get Connection Data
 
@@ -55,7 +55,7 @@ namespace AutoWLAN
             }
             else
             {
-                if (!string.IsNullOrEmpty(rk.GetValue("AutoWLAN").ToString()))
+                if (rk.GetValue("AutoWLAN") == null)
                 {
                     rk.DeleteValue("AutoWLAN");
                 }
@@ -78,8 +78,11 @@ namespace AutoWLAN
                 }
             }
 
-            AuthRequest authRequest = new AuthRequest(targetWLAN);
-            targetWLAN.Connect(authRequest); //connect
+            if (targetWLAN != null)
+            {
+                AuthRequest authRequest = new AuthRequest(targetWLAN);
+                targetWLAN.Connect(authRequest); //connect
+            }
             #endregion
 
         }
