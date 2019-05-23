@@ -1,5 +1,5 @@
 # AutoWLAN
-With this tool you can connect to a Wifi Network using a config file (at Windows Startup for example)
+With this tool you can connect to a Wifi Network using a config file (at Windows Startup for example).
 Currently the tool only connect to Wifi Networks that are already registered.
 
 ## How to use it?
